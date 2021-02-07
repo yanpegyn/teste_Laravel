@@ -22,11 +22,11 @@ php artisan serve
 
 ## Observações
 
-Para enviar comandos aos CRUD's é necessário estar autenticado.
-Após o Login, em caso de sucesso, será retornado um Token.
+Para enviar comandos aos CRUD's é necessário estar autenticado.\
+Após o Login, em caso de sucesso, será retornado um Token.\
 O Token deve ser enviado no Header "Authorization" com o tipo Bearer, para que seja possível acessar rotas de CRUD.
 
-Há um arquivo chamado "Insomnia.json", que pode ser importado no Insomnia Core, o que ajuda a visualizar as rotas.
+Há um arquivo chamado "Insomnia.json", que pode ser importado no Insomnia Core, o que ajuda a visualizar as rotas.\
 Link para download do Insomnia: [Download Insomnia Core](https://insomnia.rest/download/)
 
 ## Rotas de Cadastro e Autenticação
