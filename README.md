@@ -33,26 +33,32 @@ Link para download do Insomnia: [Download Insomnia Core](https://insomnia.rest/d
 
 **_Registro: /api/register_**\
 method: POST
->{\
->	"name": "required|min:3",\
->	"email": "required|email",\
->	"password": "required|min:8"\
->}
+```
+{
+	"name": "required|min:3",
+	"email": "required|email",
+	"password": "required|min:8"
+}
+```
 
 **_Login: /api/login_**\
 method: POST
->{\
->	"email": "required|email",\
->    "password": "required|min:8"\
->}
+```
+{
+	"email": "required|email",
+    "password": "required|min:8"
+}
+```
 
 ## CRUD de Categoria
 
 **_Create: /api/categoria_**\
 method: POST
->{\
->	"nome": "required|String"\
->}
+```
+{
+	"nome": "required|String"
+}
+```
 
 **_Read (all): /api/categoria_**\
 **_Read (single): /api/categoria/{id}_**\
@@ -60,9 +66,11 @@ method: GET
 
 **_Update: /api/categoria/{id}_**\
 method: PUT
->{\
->	"nome": "required|String"\
->}
+```
+{
+	"nome": "required|String"
+}
+```
 
 **_Delete: /api/categoria/{id}_**\
 method: DELETE
@@ -71,11 +79,13 @@ method: DELETE
 
 **_Create: /api/produto_**\
 method: POST
->{\
->	"categoria_id": "required|exists:categorias,id",\
->	"nome": "required|String",\
->	"preco": "required|numeric|min:0"\
->}
+```
+{
+	"categoria_id": "required|exists:categorias,id",
+	"nome": "required|String",
+	"preco": "required|numeric|min:0"
+}
+```
 
 **_Read (all): /api/produto_**\
 **_Read (single): /api/produto/{id}_**\
@@ -83,11 +93,13 @@ method: GET
 
 **_Update: /api/produto/{id}_**\
 method: PUT
->{\
->	"categoria_id": "required|exists:categorias,id",\
->	"nome": "required|String",\
->	"preco": "required|numeric|min:0"\
->}
+```
+{
+	"categoria_id": "required|exists:categorias,id",
+	"nome": "required|String",
+	"preco": "required|numeric|min:0"
+}
+```
 
 **_Delete: /api/produto/{id}_**\
 method: DELETE
