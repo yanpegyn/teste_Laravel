@@ -9,9 +9,16 @@ class CategoriaController extends Controller
 {
     public function create(Request $request)
     {
-        $this->validate($request, [
-            'nome' => 'required',
+        $validator = validator()->make(request()->all(), [
+            'nome' => 'required|String',
+        ], [
+            'nome.required' => "Esperado o campo 'nome'",
+            'nome.String' => "O campo 'nome' deve ser uma String",
         ]);
+
+        if ($validator->fails()) {
+            abort(response()->json($validator->errors()->first(), 400));
+        }
 
         Categoria::create(['nome' => $request->nome]);
         return "Categoria criada com sucesso!";
@@ -27,9 +34,17 @@ class CategoriaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'nome' => 'required',
+        $validator = validator()->make(request()->all(), [
+            'nome' => 'required|String',
+        ], [
+            'nome.required' => "Esperado o campo 'nome'",
+            'nome.String' => "O campo 'nome' deve ser uma String",
         ]);
+
+        if ($validator->fails()) {
+            abort(response()->json($validator->errors()->first(), 400));
+        }
+        
         $categoria = Categoria::findOrFail($id);
 
         $categoria->update([
