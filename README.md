@@ -46,7 +46,7 @@ method: POST
 ```
 {
 	"email": "required|email",
-    "password": "required|min:8"
+	"password": "required|min:8"
 }
 ```
 
