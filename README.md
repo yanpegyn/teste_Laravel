@@ -31,7 +31,7 @@ Link para download do Insomnia: [Download Insomnia Core](https://insomnia.rest/d
 
 ## Rotas de Cadastro e Autenticação
 
-**_Registro: /api/register_**
+**_Registro: /api/register_**\
 method: POST
 >{
 >	"name": "required|min:3",
@@ -39,7 +39,7 @@ method: POST
 >	"password": "required|min:8"
 >}
 
-**_Login: /api/login_**
+**_Login: /api/login_**\
 method: POST
 >{
 >	"email": "required|email",
@@ -48,28 +48,28 @@ method: POST
 
 ## CRUD de Categoria
 
-**_Create: /api/categoria_**
+**_Create: /api/categoria_**\
 method: POST
 >{
 >	"nome": "required|String"
 >}
 
-**_Read (all): /api/categoria_**
-**_Read (single): /api/categoria/{id}_**
+**_Read (all): /api/categoria_**\
+**_Read (single): /api/categoria/{id}_**\
 method: GET
 
-**_Update: /api/categoria/{id}_**
+**_Update: /api/categoria/{id}_**\
 method: PUT
 >{
 >	"nome": "required|String"
 >}
 
-**_Delete: /api/categoria/{id}_**
+**_Delete: /api/categoria/{id}_**\
 method: DELETE
 
 ## CRUD de Produto
 
-**_Create: /api/produto_**
+**_Create: /api/produto_**\
 method: POST
 >{
 >	"categoria_id": "required|exists:categorias,id",
@@ -77,11 +77,11 @@ method: POST
 >	"preco": "required|numeric|min:0"
 >}
 
-**_Read (all): /api/produto_**
-**_Read (single): /api/produto/{id}_**
+**_Read (all): /api/produto_**\
+**_Read (single): /api/produto/{id}_**\
 method: GET
 
-**_Update: /api/produto/{id}_**
+**_Update: /api/produto/{id}_**\
 method: PUT
 >{
 >	"categoria_id": "required|exists:categorias,id",
@@ -89,5 +89,5 @@ method: PUT
 >	"preco": "required|numeric|min:0"
 >}
 
-**_Delete: /api/produto/{id}_**
+**_Delete: /api/produto/{id}_**\
 method: DELETE
